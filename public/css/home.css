@@ -1,0 +1,297 @@
+img {
+    width: 100%;
+}
+
+.second {
+    margin-top: 300px;
+    margin-left: 330px;
+}
+
+.second h2 {
+    padding-top: 30px;
+    margin-left: -300px;
+    color: #0a089c;
+}
+
+/* google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* colors */
+:root {
+    --main-color: #f5b041;
+    --second-color: #212f3d;
+}
+
+section {
+    padding: 100px;
+}
+
+/* home CSS */
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* navbar CSS */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: var(--second-color);
+    font-weight: 700;
+}
+
+ul {
+    display: flex;
+}
+
+ul li a {
+    padding: 10px 22px;
+    color: var(--second-color);
+    border-radius: 2px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+ul li a:hover {
+    background: var(--second-color);
+    color: var(--main-color);
+    border: none;
+}
+
+/* home text CSS */
+.home-text {
+    max-width: 500px;
+}
+
+.home-text h1 {
+    color: var(--second-color);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 5.5rem;
+}
+
+.home-text img {
+    width: 180px;
+    padding-left: 20px;
+}
+
+.home- img {
+    width: 500px;
+    height: 500px;
+}
+
+.home- img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* hire me button */
+.home-text a {
+    padding: 12px 34px;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.home-text a:hover {
+    background: var(--second-color);
+    color: var(--main-color);
+    box-shadow: 0 10px;
+}
+
+#home .home-text {
+    height: 50px;
+    margin-top: 190px;
+    max-width: 600px;
+}
+
+.home-text img {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: 175px;
+}
+
+/* id */
+.menu {
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* About Me */
+.about h1 {
+    padding-left: 500px;
+}
+
+.about .cardAbout {
+    padding-left: 460px;
+}
+
+.pAbout {
+    padding-top: 17px;
+}
+
+/* .about {
+    padding-top: 350px;
+} */
+
+/* Education */
+.education h1 {
+    padding-left: 500px;
+}
+
+.education img {
+    padding-left: 110px;
+    width: 210px;
+}
+
+/* Keahlian */
+.skills h1 {
+    padding-left: 500px;
+}
+
+.skills .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.skills .box-container .box {
+    height: 20rem;
+    width: 26rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.skills .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.skills .box-container .box:hover img {
+    transform: scale(1.2);
+}
+
+nav b {
+    color: var(--main-color);
+}
+
+#home .home-text {
+    height: 500px;
+    padding: 20px;
+}
+
+.yt {
+    background: var(--second-color);
+    padding-top: 420px;
+    padding-bottom: 420px;
+}
+
+.youtube {
+    padding-left: 50px;
+}
+
+.visi-misi {
+    margin-right: 350px;
+}
+
+/* Kepengurusna */
+.kepengurusan {
+    background: #e1eedd;
+    padding-top: 300px;
+    padding-bottom: 300px;
+}
+
+.kepengurusan .struktur h5 {
+    padding-left: 300px;
+    font-size: 50px;
+    color: var(--second-color);
+}
+
+.kepengurusan .struktur img {
+    margin-left: 218px;
+    margin-top: 50px;
+    width: 700px;
+}
+/* Footer */
+.footr {
+    background: var(--second-color);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer span {
+    color: var(--main-color);
+    padding-left: 10px;
+}
+
+.social {
+    /* position: absolute; */
+    display: flex;
+    padding-left: 610px;
+}
+
+.social i {
+    margin-right: 24px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+.social i:hover {
+    color: #ffff;
+}
+
+/* kemitraan */
+.kemitraan {
+    background: var(--main-color);
+    padding-top: 100px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.kemitraan h5 {
+    padding-left: 530px;
+}
+
+.kemitraan img {
+    margin-left: 70px;
+    width: 150px;
+    padding: 40px;
+}

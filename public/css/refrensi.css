@@ -1,0 +1,41 @@
+
+
+
+/* colors */
+:root {
+    --main-color: #f5b041;
+    --second-color: #212f3d;
+}
+
+section .container {
+    background-color: var(--second-color);
+    padding-top: 60px;
+    margin-top: 50px;
+    padding-bottom: 60px;
+}
+
+/* makalah */
+
+.makalah  {
+    color: #ffff;
+}
+
+.container .makalah {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* sumber informasi */
+
+section .container  .sumber-informasi{
+    padding-top: 45px;
+}
+
+.sumber-informasi  {
+    color: #ffff;
+}
+
+.container .sumber-informasi{
+    padding-left: 50px;
+    padding-right: 50px;
+}

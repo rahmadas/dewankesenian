@@ -1,0 +1,15 @@
+.home-text {
+    margin-bottom: 20px;
+}
+
+ .buttons button{
+    margin: 20px;
+}
+
+section .buttons {
+    padding-left: 280px;
+}
+
+section .slide .carousel-inner{
+    height: 680px;
+}

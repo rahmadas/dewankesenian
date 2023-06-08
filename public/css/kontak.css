@@ -1,0 +1,39 @@
+
+
+/* * {
+    padding: 0;
+    margin: 0;
+} */
+
+
+.bg img {
+    padding-top: 80px;
+}
+
+section .container {
+    margin-top: -430px;
+    margin-left: 570px;
+    margin-bottom: 00px;
+}
+
+.container iframe {
+    width: 400px;
+    height: 300px;
+}
+
+section .icons .telp {
+    margin-top: -880px;
+    margin-left: -75px;
+    font-size: 60px;
+}
+
+.icons h5 {
+    margin: auto;
+}
+
+section .variasi {
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
