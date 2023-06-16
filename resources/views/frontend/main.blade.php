@@ -8,6 +8,14 @@
     <title> Dewan Kesenian Blambangan</title>
     <!-- link to css -->
     <link rel="stylesheet" href="/css/home.css">
+    <!-- link to css -->
+    <link rel="stylesheet" href="/css/berita.css">
+    <!-- link to css -->
+    <link rel="stylesheet" href="/css/kontak.css">
+    <!-- link to css -->
+    <link rel="stylesheet" href="/css/pengurus.css">
+    <!-- link to css -->
+    <link rel="stylesheet" href="/css/refrensi.css">
     <!-- link Faficon -->
     <link rel="shortcut icon" href="/pic/favicon.ico">
     <!-- Box Icons -->
@@ -30,7 +38,7 @@
     @include('frontend.partials.navbar')
 
 
-    <div class="container mt-4">
+    <header>
 
         @include('frontend.layouts.home')
         {{--  --}}
@@ -42,7 +50,7 @@
         {{--  --}}
         @include('frontend.layouts.refrensi')
 
-    </div>
+    </header>
 
 
 

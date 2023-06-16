@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Berita extends Model
 {
     use HasFactory;
+    
+    protected $fillable = [
+        'nama', 'gambar', 'keterangan'
+    ];
+    protected $dates = ['create_at'];
 }

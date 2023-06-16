@@ -3,27 +3,45 @@
 @section('title', 'berita')
 
 @section('container')
+<br><br><br>
+<div class="container">
+    <a href="/berita/create" class="btn btn-success mb-3">Tambah +</a>
+    <div class="table-responsive">
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success" role="alert">
+            {{ $message }}
+        </div>
+        @endif
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Gambar</th>
+                    <th scope="col">Keterangan</th>
+                    <th scope="col">Dibuat</th>
+                    <th scope="col">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            @foreach ($berita as $row)
+            <tr>
+                <th scope="row">{{ $row->id }}</th>
+                <td>{{ $row->nama }}</td>
+                <td>{{ $row->keterangan }}</td>
+                <td>{{ $row->gambar }}</td>
+                <td>{{ $row->created_at->diffForHumans() }}</td>
+                <td>
+                    <button type="button" class="btn btn-danger">Hapus</button>
+                    <button type="button" class="btn btn-info">Edit</button>
+                </td>
+            </tr>
+            @endforeach
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Gambar</th>
-                <th scope="col">Tanggal</th>
-                <th scope="col">Keterangan</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>15-06-2023</td>
-                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis neque eligendi perferendis in,
-                    consequuntur soluta iste ducimus placeat dolores necessitatibus harum numquam iusto labore rerum
-                    reiciendis, maxime veniam, facere nemo.</td>
-            </tr>
-        </tbody>
-    </table>
+        </table>
+    </div>
+</div>
+
+
 @endsection

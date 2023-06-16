@@ -37,7 +37,7 @@
                   </a>
               </li>
               <li>
-                  <a href="/admin/berita/index">
+                  <a href="/admin/berita">
                       <i class="fa fa-dashboard"></i> <span>Berita</span>
                   </a>
               </li>

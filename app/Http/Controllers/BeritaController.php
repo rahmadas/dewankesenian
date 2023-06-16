@@ -10,10 +10,11 @@ class BeritaController extends Controller
     /**
      * Display a listing of the resource.
      */
-
     public function index()
     {
-        return view('admin.berita.index');
+        $berita = Berita::all();
+
+        return view('admin.berita.index', compact('berita'));
     }
 
     /**
@@ -21,7 +22,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        // return view('admin.berita.index');
+        return view('admin.berita.create');
     }
 
     /**
@@ -29,25 +30,24 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama' => 'required',
-            'gambar' => 'required',
-            'keterangan' => 'required',
-        ]);
+        
+        Berita::create($request->all());
+        return redirect()->route('berita.index')->with('success','Data Berhasil Di Tambahkan');
 
-        $input = $request->all();
+        // $request->validate([
 
-        if ($image = $request->file('image')) {
-            $destinationPath = 'images/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
-        }
+        //     'nama' => 'required', 'gambar' => 'required|image|mimes:png,jpg,jpeg', 'keterangan' => 'required',
+            
+        // ]);
 
-        Berita::create($input);
+        // $input = Berita::create($request->all());
+        // if($request->hasFile('gambar')){
+        //     $request->file('gambar')->move('gambarberita/', $request->file('gambar')->getClientOriginalName());
+        //     $data->gambar = $request->file('gambar')->getClientOriginalName();
+        //     $data->save();
+        // }
 
-        return redirect()->route('berita.index')
-            ->with('success', 'Berita created successfully.');
+      
     }
 
     /**
@@ -55,7 +55,7 @@ class BeritaController extends Controller
      */
     public function show(Berita $berita)
     {
-        return view('admin.berita.show', compact('berita'));
+        //
     }
 
     /**
@@ -63,7 +63,7 @@ class BeritaController extends Controller
      */
     public function edit(Berita $berita)
     {
-        return view('admin.berita.edit', compact('berita'));
+        //
     }
 
     /**
@@ -71,26 +71,7 @@ class BeritaController extends Controller
      */
     public function update(Request $request, Berita $berita)
     {
-        $request->validate([
-            'nama' => 'required',
-            'keterangan' => 'required'
-        ]);
-
-        $input = $request->all();
-
-        if ($image = $request->file('image')) {
-            $destinationPath = 'images/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
-        } else {
-            unset($input['image']);
-        }
-
-        $berita->update($input);
-
-        return redirect()->route('admin.berita.index')
-            ->with('success', 'Berita has been updated successfully.');
+        //
     }
 
     /**
@@ -98,9 +79,6 @@ class BeritaController extends Controller
      */
     public function destroy(Berita $berita)
     {
-        $berita->delete();
-
-        return redirect()->route('admin.berita.index')
-            ->with('success', 'Berita has been deleted successfully.');
+        //
     }
 }

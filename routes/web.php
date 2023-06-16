@@ -28,14 +28,20 @@ Route::get('/logout', [AuthController::class, 'logout']);
 //firsts
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
+// Route::get('/create', [DashboardController::class, 'index']);
+
+
 
 //tables
 Route::resource('/admin/visimisi', VisimisiController::class);
 Route::resource('/admin/berita', BeritaController::class);
-Route::resource('/admin/pengurus', PengurusController::class)->middleware('auth');
+Route::resource('/admin/pengurus', PengurusController::class);
 Route::resource('/berita', BeritaController::class)->middleware('auth');
 Route::resource('/visimisi', VisimisiController::class)->middleware('auth');
 Route::resource('/pengurus', PengurusController::class)->middleware('auth');
+
+// create
+// Route::post('/pengurus', PengurusController::class)->middleware('auth');
 
 Route::get('/frontend/main', function () {
     return view('frontend.main');

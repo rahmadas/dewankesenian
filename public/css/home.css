@@ -89,6 +89,7 @@ ul li a:hover {
 /* home text CSS */
 .home-text {
     max-width: 500px;
+    margin-left: 350px;
 }
 
 .home-text h1 {
@@ -220,12 +221,12 @@ nav b {
 
 .yt {
     background: var(--second-color);
-    padding-top: 420px;
-    padding-bottom: 420px;
+    padding-top: 220px;
+    padding-bottom: 220px;
 }
 
 .youtube {
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 .visi-misi {
